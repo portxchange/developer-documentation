@@ -17,7 +17,7 @@ This API is use to fetch all the events per portcall. User need to provide the t
 Example request to use above API
 
 ```
-curl --location --request GET '{HOST_NAME}/{ENV}/api/v1/share/pull?from=2021-10-12T13%3A00%3A00Z&to=2021-10-12T17%3A00%3A00Z' \
+curl --location --request GET '{HOST_NAME}/{ENV}/v1/share/pull?from=2021-10-12T13%3A00%3A00Z&to=2021-10-12T17%3A00%3A00Z' \
 --header 'X-Company-Id: XXX' \
 --header 'Content-Type: application/json' \
 --header 'x-api-key: XXX'

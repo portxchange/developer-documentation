@@ -1,10 +1,44 @@
 # Authorization
 
-To enable access to Port-Xchange APIs, the API Key-based authoriation is used.
-API Key management is available for the users with Developer role in Synchronizer. Detailed information on the key management can be found on the [Key Management](/key-management.md) page.
+To enable access to Port-Xchange APIs, the API Key-based authorization is used.
+API Key management is available for users with the Developer role in Synchronizer. 
+Check [Key Management](/key-management.md) page for detailed information on key management.
 
 ## How to
 
-// TODO: don't forget about the Company Hash
-// TODO: describe how to provide headers
-// TODO: examples shell + programming language
+To authorize API call, the requester has to provide special headers:
+
+- `X-Api-Key` - an API key created in the Developer Portal
+- `X-Company-Id` - a company ID.
+
+A company ID can be found on the Developer Portal page.
+
+// TODO: where can one find company id + image
+
+Use the example shell-script to check your credentials:
+
+```shell
+curl --location --request GET 'https://api.developer-portal.port-xchange.com/push/v1/share/pull?from=2021-10-12T13%3A00%3A00Z&to=2021-10-12T17%3A00%3A00Z' \
+  --header 'Content-Type: application/json' \ 
+  --header 'Accepts: application/json' \
+  --header 'X-Company-Id: $YOUR_COMPANY_ID' \
+  --header 'X-Api-Key: $YOUR_API_KEY'
+```
+
+Or, alternatively, in Python:
+
+```python
+import requests
+
+headers = {
+  'Content-Type': 'application/json',
+  'Accepts': 'application/json',
+  'X-Company-Id': 'YOUR_COMPANY_ID',
+  'X-Api-Key': 'YOUR_API_KEY'
+}
+requests.get('https://api.developer-portal.port-xchange.com/push/v1/share/pull?from=2021-10-12T13%3A00%3A00Z&to=2021-10-12T17%3A00%3A00Z', headers = headers)
+```
+
+For more examples, check the [Getting started: Receiving data](/receiving-data/index.md) or [Getting started: Sending Data](/sending-data/index.md) guides or Python scripts in `resources`.
+
+// TODO: provide scripts

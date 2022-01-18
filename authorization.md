@@ -5,5 +5,6 @@ API Key management is available for the users with Developer role in Synchronize
 
 ## How to
 
+// TODO: don't forget about the Company Hash
 // TODO: describe how to provide headers
 // TODO: examples shell + programming language

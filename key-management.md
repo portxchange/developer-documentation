@@ -6,6 +6,7 @@ The Developers can create and manage API keys using the Developer Portal, access
 ## Creating API keys
 
 // TODO: how to create a key
+// TODO: rules for naming
 // TODO: with images
 
 ## Revoking and deleting API keys

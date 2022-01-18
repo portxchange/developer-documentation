@@ -1,22 +1,55 @@
 # Key Management
 
-To enable access to Port-Xchange APIs, the API Key-based authoriation is used.
-The Developers can create and manage API keys using the Developer Portal, accessible from Synchronizer application.
+To enable access to Port-Xchange APIs, the API Key-based authorization is used.
+The Developers can create and manage API keys using the Developer Portal. The Developer Portal is accessible from the Synchronizer application.
+
+## Accessing the Developer Portal
+
+To access the Developer Portal, the registered Synchronizer user must have the Developer role.
+
+Once logged in, the Developer can open the side menu with the hamburger button and find a link to 'Developer Portal'. The link will open Developer Portal and allow API key management for the company.
+
+// TODO: image of the side menu
+
+If the Developer Portal is not present in the side menu, please, verify that the user has a Developer role. After changing roles for the user, the user has to re-login into Synchronizer.
 
 ## Creating API keys
 
-// TODO: how to create a key
-// TODO: rules for naming
-// TODO: with images
+To create an API Key, a Developer has to open the Developer Portal.
+
+1. Navigate to the block named 'Create API key'
+2. Enter the API Key name. It must be unique and can contain any alphanumeric characters, as well as symbols.
+3. Click 'Generate API key'. The validation message may appear. If it does, check the input and repeat.
+4. If successful, the API key will appear in the `Your API key` field.
+5. Copy the API key and store it securely.
+is
+**Attention!** 
+The API key is displayed only once after creating. It cannot be retrieved again after creating. 
+If you lost your API key, consider deleting it and creating a new one instead.
+
+// TODO: images
 
 ## Revoking and deleting API keys
 
-// TODO: how to delete and revoke a key
-// TODO: when to delete or revoke key
-// TODO: with images
+To revoke or delete an API key, a Developer has to open the Developer Portal.
+
+1. Navigate to the block named 'Generated API keys'.
+2. In the list of keys find the wanted key.
+3. Place the mouse pointer on top of the row containing the wanted key. The 3-dot menu will appear.
+4. In the 3-dot menu find the corresponding button: 'Revoke API key' or `Remove from list`. Click on the option you need.
+5. The confirmation dialog will appear. Confirm the action if it is correct.
+
+Revoked keys stay in the list of keys. Deleted keys disappear from the list and won't be shown in the future. A revoked key can be deleted later.
+API calls with both, revoked and deleted, keys will not pass authorization.
+
+**Attention!** 
+Revocation or deletion cannot be undone. Be careful when invalidating keys, verify that it won't affect production systems.
+
+// TODO: images
 
 ## Security best practices
 
-// TODO: suggest using one key per automated system
-// TODO: suggest rotating keys once in a while
-// TODO: suggest reviewing and removing the keys not in use
+1. Do not publish API keys in your source code. If a key is exposed in a source file, consider revoking it and generating a substitution.
+1. Use a separate key for each automated system. In the event of key exposure, the affected systems will be limited to one that used that key.
+2. Rotate the keys. The suggested frequency is every 3 or 6 months.
+3. Review the keys. If the key is not used anymore, consider revoking and deleting them. Dangling keys poses a security risk.

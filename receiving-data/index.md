@@ -25,11 +25,7 @@ The URL contains next parameters:
 Timestamp format is `YYYY-MM-ddTHH:mm:ssZ`.
 For example, this is a valid value `2021-10-12T13:00:00Z`.
 
-Response for the successful request (HTTP CODE 200) will contain a list of events:
-
-```json
-// TODO: example
-```
+Response for the successful request (HTTP CODE 200) will contain a list of events. The event format is described in [the format document](https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts).
 
 Unsuccessful requests can be next:
 - Unauthorized (HTTP CODE 401) - the request does not provide correct API key

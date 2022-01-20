@@ -1,6 +1,6 @@
 # Integrating as a Port Authority
 
-Port Authority can provide data about vessels visiting port, anchorages, berths or terminals, as well as bunkering operations, tug and pilot activities.
+Port Authority can provide data about vessels visiting port, anchorages, berths, or terminals, as well as bunkering operations, tug and pilot activities.
 
 A general overview of the Port-Xchange Push API can be found on [Getting started: Sending Data](/sending-data/index.md) page.
 
@@ -18,24 +18,25 @@ berth.atd.portAuthority -- an actual time of departure from berth or terminal
 berth.cancel.portAuthority -- a berth or terminal visit cancellation
 berth.eta.portAuthority -- an estimate time of arrival at berth or terminal
 berth.etd.portAuthority -- an estimate time of departure from berth or terminal
-berth.pta.portAuthority -- a planned time of arrival at berth or terminal
 berth.ptd.portAuthority -- a planned time of departure from berth or terminal
 bunkerService.atc.portAuthority -- an actual time of beggining of bunkering service
 bunkerService.ats.portAuthority -- an actual time of end of bunkering service
 bunkerService.cancel.portAuthority -- a cancellation of bunkering service
-pilotBoardingPlace.eta.portAuthority --
-pilotBoardingPlace.pta.portAuthority --
-pilotDisembarked.at.portAuthority --
-pilotOnBoard.at.portAuthority --
+pilotBoardingPlace.pta.portAuthority -- a planned time of arrival at pilot boarding place
+pilotDisembarked.at.portAuthority -- an actual time of pilot disembarkage 
+pilotOnBoard.at.portAuthority -- an actual time of pilot getting on board
 port.ata.portAuthority -- an actual time of arrival at port
 port.atd.portAuthority -- an actual time of departure from port
 port.cancel.portAuthority -- a port visit cancellation
+port.clearance.portAuthority -- a port clearance event
 port.eta.portAuthority -- an estimage time of arrival at port
 port.etd.portAuthority -- an estimate time of departure from port
-tugsStandby.et.portAuthority --
-tugsStandby.at.portAuthority --
-tugsNoMoreStandby.et.portAuthority -- 
-tugsNoMoreStandby.at.portAuthority --
+tugsFromBerth.reportnumber.portAuthority -- a number of tugs assisting outbound movement from berth or terminal, requires number of tugs in the event context
+tugsNoMoreStandby.at.portAuthority
+tugsNoMoreStandby.et.portAuthority
+tugsStandby.at.portAuthority
+tugsStandby.et.portAuthority
+tugsToBerth.reportnumber.portAuthority -- a number of tugs assisting an inbound movement to berth or terminal, requires number of tugs in the event context
 ```
 // TODO: check if the list is full, it should contain movements at least
 

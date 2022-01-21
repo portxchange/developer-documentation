@@ -9,22 +9,22 @@ General overview of the Port-Xchange Push API can be found on [Getting started: 
 The API expects next the types of events:
 
 ```
-anchorArea.eta.carrier
-anchorArea.etd.carrier
-berth.ata.carrier
-berth.atd.carrier
-berth.cancel.carrier
-berth.eta.carrier
-berth.etd.carrier
-pilotBoardingPlace.ata.carrier
-pilotBoardingPlace.atd.carrier
-pilotBoardingPlace.eta.carrier
-pilotBoardingPlace.etd.carrier
-port.ata.carrier
-port.atd.carrier
-port.cancel.carrier
-port.eta.carrier
-port.etd.carrier
+anchorArea.eta.carrier -- an estimate time of arrival at anchorage
+anchorArea.etd.carrier -- an estimate time of departure from anchorage
+berth.ata.carrier -- an actual time of arrival at berth or terminal
+berth.atd.carrier -- an actual time of departure from berth or terminal
+berth.cancel.carrier -- a berth or terminal visit cancellation
+berth.eta.carrier -- an estimate time of arrival at berth or terminal
+berth.etd.carrier -- an estimate time of departure from berth or terminal
+pilotBoardingPlace.ata.carrier -- an actual time of arrival at pilot boarding place
+pilotBoardingPlace.atd.carrier -- an actual time of departure from pilot boarding place
+pilotBoardingPlace.eta.carrier -- an estimate time of arrival at pilot boarding place
+pilotBoardingPlace.etd.carrier -- an estimate time of departure from pilot boarding place
+port.ata.carrier -- an actual time of arrival at port
+port.atd.carrier -- an actual time of departure from port
+port.cancel.carrier -- a port visit cancellation
+port.eta.carrier -- an estimage time of arrival at port
+port.etd.carrier -- an estimate time of departure from port
 ```
 
 The full list of event types can be found in the [specification](https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts#L215-L340)

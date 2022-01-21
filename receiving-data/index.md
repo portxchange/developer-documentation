@@ -31,11 +31,7 @@ Unsuccessful requests can be next:
 - Unauthorized (HTTP CODE 401) - the request does not provide correct API key
 - Forbidden (HTTP CODE 403) - the request does not contain correct Comapny ID
 
-## How to
-
-// TODO: Describe the URLs, fields
-// TODO: Provide shell and programming language example
-// TODO: link swagger file
+Check the [example implementation](/resources/event_api.py) and [command line command](/resources/event_api.sh) for more details.
 
 ## Limitations
 

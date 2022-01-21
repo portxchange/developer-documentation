@@ -14,7 +14,7 @@ To ensure secure access to the data, we require automated systems to use authent
 
 To successfully authorize your API requests, the Developer has to create a set of API keys. 
 
-// TODO: Briefly Explain now
+An API Key and a company identifier will be required for every API call. The values are provided as HTTP headers.
 
 More information about key management and security best practices can be found on the [Key management](key-management.md) page.
 
@@ -22,18 +22,25 @@ More information about key management and security best practices can be found o
 
 Once created, API key can be used to authorize the API request.
 
-// TODO: Briefly explain how
+Each API call must have the next HTTP headers:
+- `X-Api-Key` - an API key created in the Developer Portal;
+- `X-Company-Id` - a company ID.
+
+The values for the headers can be found on the Developer Portal page.
 
 Detailed guide can be found on the [Authorization](authorization.md) page.
 
 ## Sending data to Port-Xchange
 
-// TODO: Explain what and why one should send to us
+Information about vessels and activities can be provided to Port-Xchange systems using Push API.
+The API accepts information in form of events. 
+The events must be submitted one at a time.
 
 More detailed information is located on the [Getting started: Sending Data](/sending-data/index.md) page.
 
 ## Receiveing data from Port-Xchange
 
-// TODO: Explain what can one receive from Port-Xchange APIs
+The event infomation for already finished portcalls can be received from Port-Xchange systems.
+For the provided timeframe, the API will return a list of events of all port calls that were finished in the given period. Port calls in progress or planned port calls are not available for querying.
 
 More detailed information is located on the [Getting started: Receiving data](/receiving-data/index.md) page.

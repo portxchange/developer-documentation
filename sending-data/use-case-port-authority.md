@@ -38,7 +38,6 @@ tugsStandby.at.portAuthority
 tugsStandby.et.portAuthority
 tugsToBerth.reportnumber.portAuthority -- a number of tugs assisting an inbound movement to berth or terminal, requires number of tugs in the event context
 ```
-// TODO: check if the list is full, it should contain movements at least
 
 The full list of event types can be found in the [specification](https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts#L215-L340)
 

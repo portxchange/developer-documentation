@@ -4,7 +4,11 @@ Push API is used to push events into the Port-Xchange data pool. Once pushed the
 
 The events must be submitted one at a time.
 
-The same event can be submitted multiple times. In this case, the later submissions are considered updates to the initial one.
+The events must be unique and have unique UUID. However, the same payload can be sumbitted multiple times.
+
+To update data of the event, the changed payload must be submitted and it must have new, unique UUID. 
+
+If the event property has to be removed, it is possible to sumbit `null`-data as a property value. For example, if the location that was submitted before becomes invalid and unknown, the update payload can contain `"location": null` value.
 
 The API requires authorization, for more information consult with the [Authorization](/authorization.md) page.
 
@@ -77,8 +81,12 @@ _ A system SHOULD NOT send new events with an identifier it previously cancelled
 
 ## Locations 
 
-An integrating system can provide location identifiers in a format that is used internally.
+The event payload has `location` field. The field is usually represented by location type, e.g. "terminal" or "pilotBoardingPlace", and a name.
+
+An integrating system can provide location names in a format that is used internally.
 Port-Xchange system uses internal procedures to match identifiers provided by an external system with internal location identifiers.
+
+The full list of event location types can be found in the [specification](https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts#L419-L428).
 
 **Attention!** 
 If you would like to use simple identifiers of locations, for example, numbers, contact the Port-Xchange support in advance. 

@@ -51,7 +51,7 @@ waterSupply.etc.agent -- an estmate time of water supplies operations end
 waterSupply.ets.agent -- an estmate time of water supplies operations start
 ```
 
-The full list of event types can be found in the [specification](https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts#L215-L340)
+The full list of event types can be found in the [specification](https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts#L215-L340).
 
 ## Locations
 
@@ -65,4 +65,4 @@ pilotBoardingPlace -- when the event happens at the pilot boarding place (pilot 
 port - when providing port visit estimates and actuals
 ```
 
-The full list of event types can be found in the [specification](https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts#L343-L352)
+The full list of event types can be found in the [specification](https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts#L343-L352).

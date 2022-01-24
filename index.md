@@ -4,7 +4,7 @@ This page will provide you with all the information you need to connect to our A
 
 ## Creating Port-Xchange account
 
-To integrate with Port-Xchange API, you will need to register a company and create a Developer account.
+To integrate with Port-Xchange API, you will need to register a company and create a developer account.
 
 // TODO: Explain how
 
@@ -12,7 +12,7 @@ To integrate with Port-Xchange API, you will need to register a company and crea
 
 To ensure secure access to the data, we require automated systems to use authentication mechanisms based on API keys.
 
-To successfully authorize your API requests, the Developer has to create a set of API keys. 
+To successfully authorize your API requests, the developer has to create a set of API keys. 
 
 An API Key and a company identifier will be required for every API call. The values are provided as HTTP headers.
 

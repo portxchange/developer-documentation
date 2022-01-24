@@ -71,13 +71,12 @@ The event system allows for three additional identifiers in addition to portcall
 
 - An event MUST NOT contain both a movement and berth visit identifier.
 - A system MUST NOT use both movement and berth visit identifiers, it can only send one type in its events.
-- A system SHOULD prefer movement identifiers over berth visit identifiers, unless it only sends events about berth activities.
-- An event belonging to a berth visit activity with a movement identifier MUST be interpreted as belonging to the berth visit following that movement
+- A system SHOULD prefer movement identifiers over berth visit identifiers unless it only sends events about berth activities. It is suggested that agents, carriers, and port authorities submit movement identifiers, and terminals submit berth visit identifiers. Service providers should prefer service identifiers.
 - A system MUST use the same identifier if it sends new events about the same activity, unless that identifier was cancelled in case it MUST create a new one.
 - A system MUST NOT re-use identifiers.
 - A system MAY omit a movement or berthvisit identifier if a portcall only has a single berthvisit and two movements (an inbound and outbound movement)
 _ A system SHOULD NOT send new events with an identifier it previously cancelled, since those events will be considered part of the now cancelled activity.
-- A system MAY omit berth visit and movement identifiers for actual events.
+- A system MAY omit berth visit, movement, and service identifiers for actual events.
 
 ## Locations 
 

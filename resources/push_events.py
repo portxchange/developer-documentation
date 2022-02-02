@@ -13,9 +13,9 @@ import uuid
 #
 # The example uses TEST environemnt.
 # Full list of URLS:
-# - TEST: https://push.test.port-xchange.com/
-# - ACCP: https://push.accp.port-xchange.com/
-# - PROD: https://push.port-xchange.com/
+# - TEST: https://exchange.port-xchange.com/test/
+# - ACCP: https://exchange.port-xchange.com/accp/
+# - PROD: https://exchange.port-xchange.com/prod/
 #
 #
 # Run the example with `python push_events.py` command
@@ -109,7 +109,7 @@ def main():
 
   for event in get_events(source):
     # submit the event 
-    submit_req = requests.post('https://push.test.port-xchange.com/event', json = event, headers = headers)
+    submit_req = requests.post('https://exchange.port-xchange.com/test/v1/api/event', json = event, headers = headers)
     pprint(submit_req.status_code)
     pprint(submit_req.json())
 

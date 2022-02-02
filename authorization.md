@@ -15,10 +15,13 @@ A company ID can be found on the Developer Portal page.
 
 // TODO: where can one find company id + image
 
+*Attention!* 
+For each environment, you must create a separate set of credentials.
+
 Use the example shell-script to check your credentials:
 
 ```shell
-curl --location --request GET 'https://api.developer-portal.port-xchange.com/push/v1/share/pull?from=2021-10-12T13%3A00%3A00Z&to=2021-10-12T17%3A00%3A00Z' \
+curl --location --request GET 'https://exchange.port-xchange.com/test/v1/api/events?from=2021-10-12T13%3A00%3A00Z&to=2021-10-12T17%3A00%3A00Z' \
   --header 'Content-Type: application/json' \ 
   --header 'Accepts: application/json' \
   --header 'X-Company-Id: $YOUR_COMPANY_ID' \
@@ -36,7 +39,7 @@ headers = {
   'X-Company-Id': 'YOUR_COMPANY_ID',
   'X-Api-Key': 'YOUR_API_KEY'
 }
-requests.get('https://api.developer-portal.port-xchange.com/push/v1/share/pull?from=2021-10-12T13%3A00%3A00Z&to=2021-10-12T17%3A00%3A00Z', headers = headers)
+requests.get('https://exchange.port-xchange.com/test/v1/api/events?from=2021-10-12T13%3A00%3A00Z&to=2021-10-12T17%3A00%3A00Z', headers = headers)
 ```
 
 For more examples, check the [Getting started: Receiving data](/receiving-data/index.md) or [Getting started: Sending Data](/sending-data/index.md) guides or Python scripts in `resources`.

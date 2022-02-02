@@ -15,7 +15,13 @@ The response payload can contain a large number of events. Adjust the requested 
 
 Event API can be used to fetch all events of a finished port call. 
 
-To query data, you have to send a `GET` request to the URL: // TODO: URL
+To query data, you have to send a `GET` request to the URL: 
+- for TEST environment: https://exchange.port-xchange.com/test/
+- for ACCEPTANCE environment: https://exchange.port-xchange.com/accp/
+- for PRODUCTION environment: https://exchange.port-xchange.com/prod/
+
+*Attention!* 
+For each environment, you must create a separate set of credentials.
 
 The URL contains next parameters:
 

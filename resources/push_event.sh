@@ -1,6 +1,6 @@
 #!/usr/env/sh
 
-curl --location --request POST 'https://api.developer-portal.port-xchange.com/prod/v1/share/push' \
+curl --location --request POST 'https://exchange.port-xchange.com/test/v1/api/event' \
   --header 'Content-Type: application/json' \ 
   --header 'Accepts: application/json' \
   --header 'X-Company-Id: $YOUR_COMPANY_ID' \

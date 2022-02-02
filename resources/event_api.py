@@ -10,9 +10,9 @@ import requests
 #
 # The example uses TEST environemnt.
 # Full list of URLS:
-# - TEST: https://push.test.port-xchange.com/
-# - ACCP: https://push.accp.port-xchange.com/
-# - PROD: https://push.port-xchange.com/
+# - TEST: https://exchange.port-xchange.com/test/
+# - ACCP: https://exchange.port-xchange.com/accp/
+# - PROD: https://exchange.port-xchange.com/prod/
 #
 #
 # Run the example with `python push_events.py` command
@@ -43,7 +43,7 @@ def main():
 
   from_timestamp = iso_date_str(datetime.utcnow() - timedelta(hours=2))
   to_timestamp = iso_date_str(datetime.utcnow() - timedelta(hours=4))
-  url = 'https://api.developer-portal.port-xchange.com/test/v1/share/pull?from=%s&to=%s' % (from_timestamp, to_timestamp)
+  url = 'https://exchange.port-xchange.com/test/v1/api/events?from=%s&to=%s' % (from_timestamp, to_timestamp)
   result = requests.get(url, headers = headers)
 
   pprint(result.status_code)

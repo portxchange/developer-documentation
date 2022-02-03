@@ -13,7 +13,7 @@ To authorize API call, the requester has to provide special headers:
 
 A company ID can be found on the Developer Portal page below the key creation form.
 
-![key form](/images/key-form.png)
+<img src="/images/key-form.png" alt="key form" width="518" height="577" />
 
 *Attention!* 
 For each environment, you must create a separate set of credentials.

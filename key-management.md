@@ -27,7 +27,7 @@ To create an API Key, a developer has to open the Developer Portal.
 The API key is displayed only once after creating. It cannot be retrieved again after creating. 
 If you lost your API key, consider deleting it and creating a new one instead.
 
-![key form](/images/key-form.png)
+<img src="/images/key-form.png" alt="key form" width="518" height="577" />
 
 ## Revoking and deleting API keys
 

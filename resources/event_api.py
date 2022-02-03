@@ -3,7 +3,6 @@ import os
 from pprint import pprint 
 import requests
 
-# TODO: verify URLs and links to the docs
 # The examples queries events for the port calls finished between 4 and 2 hours ago
 #
 # For the format specification see: https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts

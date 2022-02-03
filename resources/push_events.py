@@ -4,7 +4,6 @@ from pprint import pprint
 import requests
 import uuid
 
-# TODO: verify URLs and links to the docs
 # The examples submits 2 events to the PortXchange API:
 # - estimate arrival to berth
 # - estimate departure from berth
@@ -19,7 +18,7 @@ import uuid
 #
 #
 # Run the example with `python push_events.py` command
-# Ensure that you provide correct `COMPANY_ID`, `API_KEY`, and `SOURCE` environment variables
+# Ensure that you provide correct `COMPANY_ID`, `API_KEY` environment variables
 
 
 # The API accepts dates in YYYY-MM-DDThh:mm:ssTZD format
@@ -31,7 +30,7 @@ def iso_date_str(date):
 
 
 # Prepare the events
-def get_events(source): 
+def get_events(): 
   record_time = iso_date_str(datetime.utcnow())
   arrival_time = iso_date_str(datetime.utcnow() + timedelta(hours=2))
   departure_time = iso_date_str(datetime.utcnow() + timedelta(hours=12))
@@ -41,8 +40,6 @@ def get_events(source):
 
   eta = {
     'uuid': str(uuid.uuid1()),
-    # Source is provided with API credentials
-    'source': source,
     # Consult with https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts#L215
     'eventType': 'berth.eta.terminal',
     'recordTime': record_time,
@@ -68,7 +65,6 @@ def get_events(source):
   }
   etd = {
     'uuid': str(uuid.uuid1()),
-    'source': source,
     'eventType': 'berth.etd.terminal',
     'recordTime': record_time,
     'eventTime': departure_time,
@@ -92,11 +88,10 @@ def get_events(source):
 
 
 def main():
-  # Source, Comapny ID and API key are provided
+  # Comapny ID and API key are provided 
   # Check Developer Portal to get corresponding values
   company_id = os.environ['COMPANY_ID']
   api_key = os.environ['API_KEY']
-  source = os.environ['SOURCE']
 
   headers = {
     # The API talks in JSON
@@ -107,7 +102,7 @@ def main():
     'X-Api-Key': api_key,
   }
 
-  for event in get_events(source):
+  for event in get_events():
     # submit the event 
     submit_req = requests.post('https://exchange.port-xchange.com/test/v1/api/event', json = event, headers = headers)
     pprint(submit_req.status_code)

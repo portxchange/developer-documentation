@@ -6,7 +6,7 @@ This page will provide you with all the information you need to connect to our A
 
 To integrate with Port-Xchange's API, you will need to register a company and create a developer account.
 
-// TODO: Explain how
+If you still don't have an account, please, contact us using [this form](https://port-xchange.com/contact/).
 
 ## Creating API keys
 
@@ -24,7 +24,7 @@ Once created, your API key can be used to authorize the API request.
 
 Each API call must have the next HTTP headers:
 - `X-Api-Key` - an API key created in the Developer Portal;
-- `X-Company-Id` - a company ID.
+- `X-Company-Id` - a company ID, unique per environment, can be found in the Developer Portal.
 
 The values for the headers can be found on the Developer Portal page.
 

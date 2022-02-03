@@ -9,7 +9,7 @@ To access the Developer Portal, the registered Synchronizer user must have the D
 
 Once logged in, the developer can open the side menu with the hamburger button and find a link to 'Developer Portal'. The link will open Developer Portal and allow API key management for the company.
 
-![side menu](/images/side-menu.png)
+<img src="/images/side-menu.png" alt="side menu" width="376" height="444" />
 
 If the Developer Portal is not present in the side menu, please, verify that the user has a Developer role. After changing roles for the user, the user has to re-login into Synchronizer.
 
@@ -45,7 +45,7 @@ API calls with both, revoked and deleted, keys will not pass authorization.
 **Attention!** 
 Revocation or deletion cannot be undone. Be careful when invalidating keys, verify that it won't affect production systems.
 
-![removing keys](/images/removing-keys.png)
+<img src="/images/removing-keys.png" alt="removing keys" width="749" height="267" />
 
 ## Security best practices
 

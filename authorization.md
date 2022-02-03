@@ -11,9 +11,9 @@ To authorize API call, the requester has to provide special headers:
 - `X-Api-Key` - an API key created in the Developer Portal
 - `X-Company-Id` - a company ID.
 
-A company ID can be found on the Developer Portal page.
+A company ID can be found on the Developer Portal page below the key creation form.
 
-// TODO: where can one find company id + image
+![key form](/images/key-form.png)
 
 *Attention!* 
 For each environment, you must create a separate set of credentials.

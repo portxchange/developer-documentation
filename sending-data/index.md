@@ -34,6 +34,7 @@ Unsuccessful requests can be next:
 - Forbidden (HTTP CODE 403) - the request does not contain correct Comapny ID
 
 Check the [example implementation](/resources/push_event.py) and [command line command](/resources/push_event.sh)  for more details.
+
 For validating event before pushing Check the [example implementation](/resources/push_event_validate.py) and [command line command](/resources/push_event_validate.sh)  .
 
 ## Event format

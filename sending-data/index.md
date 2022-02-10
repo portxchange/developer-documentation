@@ -35,6 +35,8 @@ Unsuccessful requests can be next:
 
 Check the [example implementation](/resources/push_event.py) and [command line command](/resources/push_event.sh)  for more details.
 
+For validating event before pushing Check the [example implementation](/resources/push_event_validate.py) and [command line command](/resources/push_event_validate.sh)  .
+
 ## Event format
 
 The port call event format is an implementation of the funtional definitions for Nautical Port Information Standard (NPIS) 5.2.

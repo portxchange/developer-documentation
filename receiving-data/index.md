@@ -27,9 +27,13 @@ The URL contains next parameters:
 
 - `from` - the start timestamp of the timeframe to fetch data. The prarameter is **required**.
 - `to` - the end timestamp of the timeframe. The prarameter is **optional**. If not provided, the default value is current time.
+- `port` - the UNLOCODE of the port to fetch data. The parameter is **optional**. If not provided, data for all accessible ports will be fetched.
 
 Timestamp format is `YYYY-MM-ddTHH:mm:ssZ`.
 For example, this is a valid value `2021-10-12T13:00:00Z`.
+
+*Attention!* 
+Leaving `to` or `port` parameters empty makes the responses significantly larger. To avoid unnecessary memory consumption on the consumer side, tune your requests with reasonable values.
 
 Response for the successful request (HTTP CODE 200) will contain a list of events. The event format is described in [the format document](https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts).
 

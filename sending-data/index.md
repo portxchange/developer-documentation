@@ -17,9 +17,9 @@ The API requires authorization, for more information consult with the [Authoriza
 Push API can be used to submit events one at a time.
 
 To query data, you have to send a `POST` request to the URL:
-- for TEST environment: https://exchange.port-xchange.com/test/
-- for ACCEPTANCE environment: https://exchange.port-xchange.com/accp/
-- for PRODUCTION environment: https://exchange.port-xchange.com/prod/
+- for TEST environment: https://exchange.port-xchange.com/test/v1/api/event
+- for ACCEPTANCE environment: https://exchange.port-xchange.com/accp/v1/api/event
+- for PRODUCTION environment: https://exchange.port-xchange.com/prod/v1/api/event
 
 *Attention!* 
 For each environment, you must create a separate set of credentials.

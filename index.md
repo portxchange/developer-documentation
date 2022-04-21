@@ -44,3 +44,10 @@ The event infomation for already finished port calls can be received from Port-X
 For the provided timeframe, the API will return a list of events of all port calls that were finished in the given period. Port calls in progress or planned port calls are not available for querying.
 
 More detailed information is located on the [Getting started: Receiving data](/receiving-data/index.md) page.
+
+## Retrieving current visit details of a ship from Port-Xchange
+
+Information about the ship's current visit for that day (if exists) along with ship's metadata.
+This API accepts ship's imo number in the input url.
+
+More detailed information is located on the [Getting started: Current visit](/current-visit/index.md) page.

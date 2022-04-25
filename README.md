@@ -2,9 +2,11 @@
 
 The documentation in this repository describes PortXchange APIs and the ways how to integrate with them.
 
-To get started, please, review the [Getting started](/index.md) guide or
+To get started, please read the following guides: 
 
-jump straight to the specific [Getting started: Receiving data](/receiving-data/index.md) or
+[Getting started](/index.md)
+
+[Getting started: Receiving data](/receiving-data/index.md)
 
 [Getting started: Sending Data](/sending-data/index.md)
 

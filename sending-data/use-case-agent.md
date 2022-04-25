@@ -2,7 +2,7 @@
 
 Agents can provide data about vessels visiting port, anchorages, berths, or terminals, as well as any planned activities for a vessel.
 
-General overview of the Port-Xchange Push API can be found on [Getting started: Sending Data](/sending-data/index.md) page.
+General overview of the PortXchange Push API can be found on [Getting started: Sending Data](/sending-data/index.md) page.
 
 ## Event types
 

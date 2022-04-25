@@ -1,6 +1,6 @@
 # Getting started: Sending Data
 
-Push API is used to push events into the Port-Xchange data pool. Once pushed the event will be processed into a port call.
+Push API is used to push events into the PortXchange data pool. Once pushed the event will be processed into a port call.
 
 The events must be submitted one at a time.
 
@@ -91,12 +91,12 @@ _ A system SHOULD NOT send new events with an identifier it previously cancelled
 The event payload has `location` field. The field is usually represented by location type, e.g. "terminal" or "pilotBoardingPlace", and a name.
 
 An integrating system can provide location names in a format that is used internally.
-Port-Xchange system uses internal procedures to match identifiers provided by an external system with internal location identifiers.
+PortXchange system uses internal procedures to match identifiers provided by an external system with internal location identifiers.
 
 The full list of event location types can be found in the [specification](https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts#L419-L428).
 
 **Attention!** 
-If you would like to use simple identifiers of locations, for example, numbers, contact the Port-Xchange support in advance. 
+If you would like to use simple identifiers of locations, for example, numbers, contact the PortXchange support in advance. 
 
 ## Use Cases
 

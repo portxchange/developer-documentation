@@ -1,6 +1,6 @@
 # Key Management
 
-To enable access to Port-Xchange APIs, the API Key-based authorization is used.
+To enable access to PortXchange APIs, the API Key-based authorization is used.
 The developers can create and manage API keys using the Developer Portal. The Developer Portal is accessible from the Synchronizer application.
 
 ## Accessing the Developer Portal

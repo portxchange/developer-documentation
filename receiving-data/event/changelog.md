@@ -1,4 +1,4 @@
-# Port-Xchange Data Retrival API Changelog
+# PortXchange Data Retrival API Changelog
 
 ## Event API
 

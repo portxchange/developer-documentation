@@ -29,7 +29,7 @@ example for the response is provided in [example](/resources/ship_visit_not_foun
 Unsuccessful requests can be next:
 
 - Unauthorized (HTTP CODE 401) - the request does not provide correct API key
-- Forbidden (HTTP CODE 403) - the request does not contain correct Comapny ID
+- Forbidden (HTTP CODE 403) - the request does not contain correct Company ID
 
 Check the [example implementation](/resources/ship_api.py) and [command line command](/resources/ship_api.sh) for more
 details.

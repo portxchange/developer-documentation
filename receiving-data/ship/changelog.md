@@ -1,4 +1,4 @@
-# Port-Xchange Ship API Changelog
+# PortXchange Ship API Changelog
 
 ## Ship API
 

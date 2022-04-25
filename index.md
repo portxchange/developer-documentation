@@ -2,9 +2,9 @@
 
 This page will provide you with all the information you need to connect to our API(s).
 
-## Creating Port-Xchange account
+## Creating PortXchange account
 
-To integrate with Port-Xchange's API, you will need to register a company and create a developer account.
+To integrate with PortXchange's API, you will need to register a company and create a developer account.
 
 If you still don't have an account, please, contact us using [this form](https://port-xchange.com/contact/).
 
@@ -30,24 +30,22 @@ The values for the headers can be found on the Developer Portal page.
 
 A detailed guide can be found on the [Authorization](authorization.md) page.
 
-## Sending data to Port-Xchange
+## Sending data to PortXchange
 
-Information about vessels and activities can be provided to Port-Xchange systems using the Push API.
+Information about vessels and activities can be provided to PortXchange systems using the Push API.
 This API accepts information in form of events. 
 The events must be submitted one at a time.
 
 More detailed information is located on the [Getting started: Sending Data](/sending-data/index.md) page.
 
-## Receiving data from Port-Xchange
+## Receiving data from PortXchange
 
-The event infomation for already finished port calls can be received from Port-Xchange systems.
+Besides sending data to PortXchange, it is also possible to retrieve data from our systems. 
+Currently there are a few API's through which data can be queried.
+More detailed information is located on the [Receiving data](/receiving-data/index.md) page.
+
+The event infomation for already finished port calls can be received from PortXchange systems.
 For the provided timeframe, the API will return a list of events of all port calls that were finished in the given period. Port calls in progress or planned port calls are not available for querying.
 
 More detailed information is located on the [Getting started: Receiving data](/receiving-data/index.md) page.
 
-## Retrieving current visit details of a ship from Port-Xchange
-
-Information about the ship's current visit for that day (if exists) along with ship's metadata.
-This API accepts ship's imo number in the input url.
-
-More detailed information is located on the [Getting started: Current visit](/current-visit/index.md) page.

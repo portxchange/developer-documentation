@@ -3,7 +3,7 @@
 Service providers can send data about their planned and actual activities. 
 It includes estimate and actual dates of the beginning end finishing the service and calncellation events.
 
-General overview of the Port-Xchange Push API can be found on [Getting started: Sending Data](/sending-data/index.md) page.
+General overview of the PortXchange Push API can be found on [Getting started: Sending Data](/sending-data/index.md) page.
 
 ## Event types
 

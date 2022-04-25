@@ -1,6 +1,6 @@
 # Authorization
 
-To enable access to Port-Xchange APIs, the API Key-based authorization is used.
+To enable access to PortXchange APIs, the API Key-based authorization is used.
 API Key management is available for users with the Developer role in Synchronizer. 
 Check [Key Management](/key-management.md) page for detailed information on key management.
 

@@ -4,7 +4,7 @@ Terminals can provide data about vessels visiting their berths.
 
 API expects events containing data of estimated or actual times of arrival and depature and cargo operation schedules.
 
-A general overview of the Port-Xchange Push API can be found on [Getting started: Sending Data](/sending-data/index.md) page.
+A general overview of the PortXchange Push API can be found on [Getting started: Sending Data](/sending-data/index.md) page.
 
 ## Event types
 

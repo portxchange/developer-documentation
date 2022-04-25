@@ -1,25 +1,24 @@
 # Getting started: Getting ship's current visit
 
-To retrieve current visit of a ship from Port-Xchange, Ship API can be used.
+To retrieve the current or upcoming visit of a ship from PortXchange, the Ship API can be used.
 
-Ship API provides the current visit details of the provided ship (if exists) with the ship's metadata.
+The Ship API provides the current visit details of the provided ship (if exists) with the ship's metadata.
 
 ## Using Ship API
 
-Event API can be used to fetch all events of a finished port call.
-
 To query data, you have to send a `GET` request to the URL:
 
-- for TEST environment: https://exchange.port-xchange.com/test/v1/api/ships/{{ship_imo}}/visits/current
-- for ACCEPTANCE environment: https://exchange.port-xchange.com/accp/v1/api/ships/{{ship_imo}}/visits/current
-- for PRODUCTION environment: https://exchange.port-xchange.com/prod/v1/api/ships/{{ship_imo}}/visits/current
+- for TEST environment: https://exchange.port-xchange.com/test/v1/api/ships/{{ship_id}}/visits/current
+- for ACCEPTANCE environment: https://exchange.port-xchange.com/accp/v1/api/ships/{{ship_id}}/visits/current
+- for PRODUCTION environment: https://exchange.port-xchange.com/prod/v1/api/ships/{{ship_id}}/visits/current
 
 *Attention!*
 For each environment, you must create a separate set of credentials.
 
 The URL contains :
 
-- `ship_imo` - the imo of the ship for which the current visit details are requested **required**.
+- `ship_id` - the imo or mmsi of the ship for which the current visit details are requested **required**.
+- `port` - the optional port parameter. If provided it returns the current or upcoming visit for the given ship and port. 
 
 Response for the successful request (HTTP CODE 200) will contain the ship metadata and visit details if visit is found
 for that day. The example for the success response is provided in [example](/resources/ship_success_response.json).
@@ -37,4 +36,4 @@ details.
 
 ## Changelog
 
-Important updates for the APIs will be published on the [Changelog](/current-visit/changelog.md) page.
+Important updates for the APIs will be published on the [Changelog](/receiving-data/ship/changelog.md) page.

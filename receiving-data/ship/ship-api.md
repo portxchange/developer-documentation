@@ -20,8 +20,8 @@ The URL contains :
 - `ship_id` - the imo or mmsi of the ship for which the current visit details are requested **required**.
 - `port` - the optional port query parameter. If provided it returns the current or upcoming visit for the given ship and port. 
 
-Response for the successful request (HTTP CODE 200) will contain the ship metadata and visit details if visit is found
-for that day. The example for the success response is provided in [example](/resources/ship_success_response.json).
+Response for the successful request (HTTP CODE 200) will contain the ship metadata and visit details if the visit is found. 
+The example for the success response is provided in [example](/resources/ship_success_response.json).
 
 If visit for the ship for the particular ship is not found then response will be (HTTP CODE 200) with message. The
 example for the response is provided in [example](/resources/ship_visit_not_found_response.json).

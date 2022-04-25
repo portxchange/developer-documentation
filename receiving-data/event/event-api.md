@@ -39,7 +39,7 @@ Response for the successful request (HTTP CODE 200) will contain a list of event
 
 Unsuccessful requests can be next:
 - Unauthorized (HTTP CODE 401) - the request does not provide correct API key
-- Forbidden (HTTP CODE 403) - the request does not contain correct Comapny ID
+- Forbidden (HTTP CODE 403) - the request does not contain correct Company ID
 
 Check the [example implementation](/resources/event_api.py) and [command line command](/resources/event_api.sh) for more details.
 

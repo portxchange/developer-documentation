@@ -27,7 +27,7 @@ Each API call must have the next HTTP headers:
 - `X-Company-Id` - a company ID, unique per environment, can be found in the Developer Portal.
 - `Content-Type`:`application/json` 
 
-The values for the headers can be found on the Developer Portal page.
+The values for the first two headers can be found on the Developer Portal page.
 
 A detailed guide can be found on the [Authorization](authorization.md) page.
 

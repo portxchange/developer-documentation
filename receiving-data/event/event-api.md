@@ -26,7 +26,7 @@ For each environment, you must create a separate set of credentials.
 The URL contains next parameters:
 
 - `from` - the start timestamp of the timeframe to fetch data. The prarameter is **required**.
-- `to` - the end timestamp of the timeframe. The prarameter is **optional**. If not provided, the default value is current time.
+- `to` - the end timestamp of the timeframe. The parameter is **optional**. If not provided, the default value is current time.
 - `port` - the UNLOCODE of the port to fetch data. The parameter is **optional**. If not provided, data for all accessible ports will be fetched.
 
 Timestamp format is `YYYY-MM-ddTHH:mm:ssZ`.

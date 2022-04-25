@@ -18,7 +18,7 @@ For each environment, you must create a separate set of credentials.
 The URL contains :
 
 - `ship_id` - the imo or mmsi of the ship for which the current visit details are requested **required**.
-- `port` - the optional port query parameter. If provided it returns the current or upcoming visit for the given ship and port. 
+- `port` - the port query parameter. The parameter is **optional**. If provided it returns the current or upcoming visit for the given ship and port. 
 
 Response for the successful request (HTTP CODE 200) will contain the ship metadata and visit details if the visit is found. 
 The example for the success response is provided in [example](/resources/ship_success_response.json).

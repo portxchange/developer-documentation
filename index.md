@@ -25,6 +25,7 @@ Once created, your API key can be used to authorize the API request.
 Each API call must have the next HTTP headers:
 - `X-Api-Key` - an API key created in the Developer Portal;
 - `X-Company-Id` - a company ID, unique per environment, can be found in the Developer Portal.
+- `Content-Type`:`application/json` 
 
 The values for the headers can be found on the Developer Portal page.
 

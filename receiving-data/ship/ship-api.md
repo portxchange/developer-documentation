@@ -1,4 +1,4 @@
-# Getting started: Getting ship's current visit
+# Getting started: Ship API
 
 To retrieve the current or upcoming visit of a ship from PortXchange, the Ship API can be used.
 

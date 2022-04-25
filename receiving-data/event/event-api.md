@@ -1,4 +1,4 @@
-# Getting started: Receiving data
+# Getting started: Event API
 
 To receive data from PortXchange, Event API can be used.
 

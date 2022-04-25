@@ -44,8 +44,4 @@ Besides sending data to PortXchange, it is also possible to retrieve data from o
 Currently there are a few API's through which data can be queried.
 More detailed information is located on the [Receiving data](/receiving-data/index.md) page.
 
-The event infomation for already finished port calls can be received from PortXchange systems.
-For the provided timeframe, the API will return a list of events of all port calls that were finished in the given period. Port calls in progress or planned port calls are not available for querying.
-
-More detailed information is located on the [Getting started: Receiving data](/receiving-data/index.md) page.
 

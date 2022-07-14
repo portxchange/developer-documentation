@@ -2,9 +2,10 @@
 
 To receive data from PortXchange, Event API can be used.
 
-Event API provides a list of events we received in our system during a selected timeframe. Because
-of the amount of events we receive daily, user is also expected to specify the port of interest, as
-otherwise the size of the response could end up being too much to process.
+Event API provides a list of events we received in our system during a selected timeframe (i.e. events
+with a record time within that timeframe). Because of the amount of events we receive daily, user
+is also expected to specify the port of interest, as otherwise the size of the response could end
+up being too much to process.
 
 Please note that the events you will receive are not necessarily all the events we have available,
 but the subset of events you are allowed to see based on our data authorization model.

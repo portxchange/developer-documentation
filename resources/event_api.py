@@ -42,7 +42,8 @@ def main():
 
   from_timestamp = iso_date_str(datetime.utcnow() - timedelta(hours=2))
   to_timestamp = iso_date_str(datetime.utcnow() - timedelta(hours=4))
-  url = 'https://exchange.port-xchange.com/test/v1/api/events?from=%s&to=%s' % (from_timestamp, to_timestamp)
+  port = 'NLRTM'
+  url = 'https://exchange.port-xchange.com/test/v1/api/overview-events?from=%s&to=%s&port=%s' % (from_timestamp, to_timestamp, port)
   result = requests.get(url, headers = headers)
 
   pprint(result.status_code)

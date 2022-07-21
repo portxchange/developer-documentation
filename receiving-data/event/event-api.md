@@ -7,8 +7,8 @@ with a record time within that timeframe). Because of the amount of events we re
 is also expected to specify the port of interest, as otherwise the size of the response could end
 up being too much to process.
 
-Please note that the events you will receive are not necessarily all the events we have available,
-but the subset of events you are allowed to see based on our data authorization model.
+Please note that the events you will receive are not necessarily all the events we have available in
+our system, but the subset of events you are allowed to see based on our data authorization model.
 
 **Attention!** 
 Even after specifying the port, the response payload can still contain a large number of events. In that
@@ -16,7 +16,13 @@ case please adjust the requested timespan accordingly.
 
 ## Using Event API
 
-To query data, you have to send a `GET` request to the URL: 
+Event API provides the user with 2 endpoints to use, `overview-events` and `relevant-overview-events`.
+The first one returns all the events the user is allowed to see for the provided query parameters.
+The second one provides only event relevant to the portcall's the user's company has contributed events
+to.
+
+To query data, you have to send a `GET` request to the URL (for 2nd endpoint just replace
+`overview-events` with `relevant-overview-events` in the url): 
 - for TEST environment: https://exchange.port-xchange.com/test/v1/api/overview-events
 - for ACCEPTANCE environment: https://exchange.port-xchange.com/accp/v1/api/overview-events
 - for PRODUCTION environment: https://exchange.port-xchange.com/prod/v1/api/overview-events

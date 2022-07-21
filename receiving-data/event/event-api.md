@@ -16,10 +16,10 @@ case please adjust the requested timespan accordingly.
 
 ## Using Event API
 
-Event API provides the user with 2 endpoints to use, `overview-events` and `relevant-overview-events`.
-The first one returns all the events the user is allowed to see for the provided query parameters.
-The second one provides only event relevant to the portcall's the user's company has contributed events
-to.
+Event API provides the user with 2 endpoints to use, `overview-events` and
+`relevant-overview-events`. The first one returns all the events the user is allowed to see for the
+provided query parameters. The second one provides only events relevant to the portcalls the user's
+company has contributed events to.
 
 To query data, you have to send a `GET` request to the URL (for 2nd endpoint just replace
 `overview-events` with `relevant-overview-events` in the url): 

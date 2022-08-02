@@ -2,10 +2,16 @@
 
 To receive data from PortXchange, Event API can be used.
 
-Event API provides a list of events we received in our system during a selected timeframe (i.e. events
-with a record time within that timeframe). Because of the amount of events we receive daily, user
-is also expected to specify the port of interest, as otherwise the size of the response could end
-up being too much to process.
+Event API provides a list of events we received in our system and assigned to a portcall during
+a provided timeframe (with an assignment time within that timeframe). Because of the amount of
+events we receive daily, user is also expected to specify the port of interest, as otherwise the
+size of the response could end up being too much to process.
+
+**Note:** Most of the time the *assignment time* of an event coincides to the moment we
+received that event in our system (i.e. *record time*). However, there are cases when an
+event gets re-assigned to a different portcall, ending up with a new *assignment time*. Using
+*assignment time* for comparing against the provided timeframe ensures that the users receive
+updates of event re-assignments.
 
 Please note that the events you will receive are not necessarily all the events we have available in
 our system, but the subset of events you are allowed to see based on our data authorization model.
@@ -47,14 +53,6 @@ Unsuccessful requests can be next:
 - Forbidden (HTTP CODE 403) - the request does not contain correct Company ID
 
 Check the [example implementation](/resources/event_api.py) and [command line command](/resources/event_api.sh) for more details.
-
-## Limitations
-
-1. While the events for the most part are immutable, their `portcallId` field is not. That is due to 
-   the possibility than an event formerly considered part of portcall `A` by our system, can later be
-   considered part of portcall `B`. What this means for the user is that the portcall id of an event
-   they fetched by our API can become outdated. Portcall ids usually stop mutating after the portcall
-   has completed.
 
 ## Changelog
 

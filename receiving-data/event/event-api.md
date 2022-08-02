@@ -2,14 +2,14 @@
 
 To receive data from PortXchange, Event API can be used.
 
-Event API provides a list of events we received in our system and assigned to a portcall during
+Event API provides a list of events we received in our system and assigned to a port call during
 a provided timeframe (with an assignment time within that timeframe). Because of the amount of
 events we receive daily, user is also expected to specify the port of interest, as otherwise the
 size of the response could end up being too much to process.
 
-**Note:** Most of the time the *assignment time* of an event coincides to the moment we
+**Note:** Most of the time the *assignment time* of an event coincides with the moment we
 received that event in our system (i.e. *record time*). However, there are cases when an
-event gets re-assigned to a different portcall, ending up with a new *assignment time*. Using
+event gets re-assigned to a different port call, ending up with a new *assignment time*. Using
 *assignment time* for comparing against the provided timeframe ensures that the users receive
 updates of event re-assignments.
 

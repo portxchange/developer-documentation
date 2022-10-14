@@ -42,7 +42,7 @@ More detailed information is located on the [Getting started: Sending Data](/sen
 ## Receiving data from PortXchange
 
 Besides sending data to PortXchange, it is also possible to retrieve data from our systems. 
-Currently there are a few API's through which data can be queried.
+Currently there are a few endpoints through which data can be queried.
 More detailed information is located on the [Receiving data](/receiving-data/index.md) page.
 
 

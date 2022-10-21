@@ -5,8 +5,6 @@ import requests
 
 # The examples queries events for the port calls finished between 4 and 2 hours ago
 #
-# For the format specification see: https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts
-#
 # The example uses TEST environemnt.
 # Full list of URLS:
 # - TEST: https://exchange.port-xchange.com/test/
@@ -43,7 +41,7 @@ def main():
   from_timestamp = iso_date_str(datetime.utcnow() - timedelta(hours=2))
   to_timestamp = iso_date_str(datetime.utcnow() - timedelta(hours=4))
   port = 'NLRTM'
-  url = 'https://exchange.port-xchange.com/test/v1/api/overview-events?from=%s&to=%s&port=%s' % (from_timestamp, to_timestamp, port)
+  url = 'https://exchange.port-xchange.com/test/v1/api/events?from=%s&to=%s&port=%s' % (from_timestamp, to_timestamp, port)
   result = requests.get(url, headers = headers)
 
   pprint(result.status_code)

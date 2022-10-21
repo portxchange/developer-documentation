@@ -1,75 +1,67 @@
 # Getting started: Sending Data
 
-Push API is used to push events into the PortXchange data pool. Once pushed the event will be processed into a port call.
+Exchange API can be used to send events into the PortXchange data pool. Once pushed, the event will
+be processed into a port call.
 
 The events must be submitted one at a time.
 
-The events must be unique and have unique UUID. However, the same payload can be sumbitted multiple times.
+The events must be unique and have unique UUID. However, the same payload can be sumbitted multiple
+times.
 
 To update data of the event, the changed payload must be submitted and it must have new, unique UUID. 
 
-If the event property has to be removed, it is possible to sumbit `null`-data as a property value. For example, if the location that was submitted before becomes invalid and unknown, the update payload can contain `"location": null` value.
+If the event property has to be removed, it is possible to sumbit `null`-data as a property value.
+For example, if the location that was submitted before becomes invalid and unknown, the update
+payload can contain `"location": null` value.
 
-The API requires authorization, for more information consult with the [Authorization](/authorization.md) page.
-
-## Using Push API
-
-Push API can be used to submit events one at a time.
-
-To query data, you have to send a `POST` request to the URL:
-- for TEST environment: https://exchange.port-xchange.com/test/v1/api/event
-- for ACCEPTANCE environment: https://exchange.port-xchange.com/accp/v1/api/event
-- for PRODUCTION environment: https://exchange.port-xchange.com/prod/v1/api/event
-
-*Attention!* 
-For each environment, you must create a separate set of credentials.
-
-The API accepts JSON-encoded objects of the format described below.
-
-Response for the successful request will contain the accepted event payload (HTTP CODE 200).
-
-Unsuccessful requests can be next:
-- Bad Request (HTTP CODE 400) - the payload is malformed or contains conflicting data. The explanation is provided in the response payload.
-- Unauthorized (HTTP CODE 401) - the request does not provide correct API key
-- Forbidden (HTTP CODE 403) - the request does not contain correct Comapny ID
-
-Check the [example implementation](/resources/push_event.py) and [command line command](/resources/push_event.sh)  for more details.
-
-For validating event before pushing Check the [example implementation](/resources/push_event_validate.py) and [command line command](/resources/push_event_validate.sh)  .
+To use the Exchange API for sending events, please consult the [Exchange API Docs](https://portxchange.github.io/exchange-api-docs/).
+For examples of sending an event via Exchange API, refer to [Python implementation example](/resources/push_event.py)
+and [command line example](/resources/push_event.sh). Keep in mind that all endpoints require the API
+key and company ID headers, as described in [Authorization](/authorization.md) page.
 
 ## Event format
 
-The port call event format is an implementation of the funtional definitions for Nautical Port Information Standard (NPIS) 5.2.
+The port call event format is an implementation of the functional definitions for Nautical Port Information Standard (NPIS) 5.2.
 
-The event format is fully described in [the format document](https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts).
+The event format is fully described in the [Exchange API Docs](https://portxchange.github.io/exchange-api-docs/#/routes/post-event).
 
 Every event must be JSON-encoded and contain next fields:
 - eventTime - a timestamp when the event is happening;
-- eventType - a type of the event. Full list of the events can be found in the [specification](https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts#L214-L416);
+- eventType - a type of the event. Full list of the events can be found in the API docs.
 - port - a UNLOCODE of a port, where the event is happening;
-- recordTime - a timestamp when the event is registered or issued, the timestamp cannot be in future;
+- recordTime - a timestamp when the event is registered or issued, the timestamp cannot be in future; if no
+  recordTime is provided, the timestamp of the moment the event reaches PortXchange is used
 - ship - an object containing one of the supported identifiers: `IMO`, `MMSI`, `ENI`, `USCG`
-- source - a name of the system or organization that provides the event;
 - uuid - a unique identifier of the event ([what is uuid](https://www.uuidtools.com/what-is-uuid));
-- version - a version.
+  if no uuid is provided, a random one is assigned to the event
 
 **Attention!** 
 A vessel name provided in the `ship` object will not be used as a vessel identifier.
 
-### MovementId, BerthVisitId, ServiceId and OrganisationPortcallId
+### LocalPortcallId, OrganizationPortcallId, MovementId, BerthVisitId, LocationVisitId and ServiceId
 
-The event system allows for three additional identifiers in addition to portcall id's:
-* Movement identifier: this identifies a movement, which is a ship traveling from one location to another inside a portcall
-* Berth visit identifier: this identifies a berth visit, which is a ship being alongside a single berth
-* Service identifier: this identifies a single service like bunkering
-* Organisation port call identifier: this identifies a visit, which is a ship its stay within a single port. This is an internal identifier for an organization, independant of the port call id which is the identifier of the local port authority.
+The event system allows six different identifiers to be included in its context:
+* `localPortcallId`: this identifies the port call, which is a ship's stay within a single port.
+  It is the identifier used by the local port authority, recognised by other organizations.
+* `organizationPortcallId`: this also identifies the port call, but it is the identifier used internally 
+  by a single organization, e.g. terminal company. The main difference to `localPortcallId` is that
+  each organization can have its own `organizationPortcallId` and multiple `organizationPortcallId`s
+  can refer to the same visit, but that visit can only have one `localPortcallId`, issued by the port authority.
+* `movementId`: this identifies a movement, which is a ship traveling from one location to another inside a port call
+* `berthVisitId`: this identifies a berth visit, which is a ship being alongside a single berth
+* `locationVisitId`: this identifies an anchor area visit, which is a ship being anchored in an anchor area of the port
+* `serviceId`: this identifies a single service like bunkering
 
-| ID                                | Format              |
-|-----------------------------------|---------------------|
-| Movement identifier               | `MID-{SYSTEM}-{ID}` |
-| Berth visit identifier            | `BID-{SYSTEM}-{ID}` |
-| Service identifier                | `SID-{SYSTEM}-{ID}` |
-| Organisation port call identifier | `PID-{SYSTEM}-{ID}` |
+| ID                      | Format              |
+|-------------------------|---------------------|
+| localPortcallId         | `{UNLOCODE}{ID}`    |
+| organizationPortcallId  | `PID-{SYSTEM}-{ID}` |
+| movementId              | `MID-{SYSTEM}-{ID}` |
+| berthVisitId            | `BID-{SYSTEM}-{ID}` |
+| locationVisitId         | `LID-{SYSTEM}-{ID}` |
+| serviceId               | `SID-{SYSTEM}-{ID}` |
+
+`{UNLOCODE}` must be replaced by the UNLOCODE of the port the port call is taking place.
 
 `{SYSTEM}` must be replaced by a string consisting of alphanumeric characters or an underscore (`[A-Z0-9_]`) of which can reasonably be assumed that it globally uniquely identifies the system sending events.
 
@@ -93,7 +85,7 @@ The event payload has `location` field. The field is usually represented by loca
 An integrating system can provide location names in a format that is used internally.
 PortXchange system uses internal procedures to match identifiers provided by an external system with internal location identifiers.
 
-The full list of event location types can be found in the [specification](https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts#L419-L428).
+The full list of event location types can again be found in the API docs.
 
 **Attention!** 
 If you would like to use simple identifiers of locations, for example, numbers, contact the PortXchange support in advance. 
@@ -107,7 +99,3 @@ We describe more specific use-cases on the following pages:
 - [Integrating with Push API as a Terminal](/sending-data/use-case-terminal.md)
 - [Integrating with Push API as a Carrier](/sending-data/use-case-carrier.md)
 - [Integrating with Push API as a Service Provider](/sending-data/use-case-service-provider.md)
-
-## Changelog
-
-Important updates for the APIs will be published on the [Changelog](/sending-data/changelog.md) page.

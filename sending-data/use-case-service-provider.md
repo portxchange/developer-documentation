@@ -3,7 +3,7 @@
 Service providers can send data about their planned and actual activities. 
 It includes estimate and actual dates of the beginning end finishing the service and calncellation events.
 
-General overview of the PortXchange Push API can be found on [Getting started: Sending Data](/sending-data/index.md) page.
+General overview of the PortXchange Exchange API can be found on [Getting started: Sending Data](/sending-data/index.md) page.
 
 ## Event types
 
@@ -46,7 +46,7 @@ waterSupply.etc.serviceProvider
 waterSupply.ets.serviceProvider
 ```
 
-The full list of event types can be found in the [specification](https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts#L215-L340)
+The full list of event types can be found in the [Exchange API Docs](https://portxchange.github.io/exchange-api-docs/#/routes/post-event).
 
 ## Locations
 
@@ -57,4 +57,4 @@ berth -- if the exact berth is known at the moment of data submission (berth and
 terminal -- if the exact berth is not known at the moment of data submission (berth and terminal visits, bunkering and pilot events)
 ```
 
-The full list of event types can be found in the [specification](https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts#L343-L352)
+The full list of location types can be found in the [Exchange API Docs](https://portxchange.github.io/exchange-api-docs/#/routes/post-event).

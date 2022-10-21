@@ -38,20 +38,30 @@ Every event must be JSON-encoded and contain next fields:
 **Attention!** 
 A vessel name provided in the `ship` object will not be used as a vessel identifier.
 
-### MovementId, BerthVisitId, ServiceId and OrganisationPortcallId
+### LocalPortcallId, OrganizationPortcallId, BerthVisitId, MovementId, LocationVisitId and ServiceId
 
-The event system allows for four additional identifiers in addition to `localPortcallId`:
-* Movement identifier: this identifies a movement, which is a ship traveling from one location to another inside a portcall
-* Berth visit identifier: this identifies a berth visit, which is a ship being alongside a single berth
-* Service identifier: this identifies a single service like bunkering
-* Organisation port call identifier: this identifies a visit, which is a ship its stay within a single port. This is an internal identifier for an organization, independent of the `localPortcallId` which is the identifier of the local port authority.
+The event system allows five different identifiers to be included in its context:
+* `localPortcallId`: this identifies the port call, which is a ship's stay within a single port.
+  It is the identifier used by the local port authority, recognised by other organizations.
+* `organizationPortcallId`: this also identifies the port call, but it is the identifier used internally 
+  by a single organization, e.g. terminal company. The main difference to `localPortcallId` is that
+  each organization can have its own `organizationPortcallId` and multiple `organizationPortcallId`s
+  can refer to the same visit, but that visit can only have one `localPortcallId`, issued by the port authority.
+* `movementId`: this identifies a movement, which is a ship traveling from one location to another inside a port call
+* `berthVisitId`: this identifies a berth visit, which is a ship being alongside a single berth
+* `locationVisitId`: this identifies an anchor area visit, which is a ship being anchored in an anchor area of the port
+* `serviceId`: this identifies a single service like bunkering
 
-| ID                                | Format              |
-|-----------------------------------|---------------------|
-| Movement identifier               | `MID-{SYSTEM}-{ID}` |
-| Berth visit identifier            | `BID-{SYSTEM}-{ID}` |
-| Service identifier                | `SID-{SYSTEM}-{ID}` |
-| Organisation port call identifier | `PID-{SYSTEM}-{ID}` |
+| ID                      | Format              |
+|-------------------------|---------------------|
+| localPortcallId         | `{UNLOCODE}{ID}`    |
+| organizationPortcallId  | `PID-{SYSTEM}-{ID}` |
+| movementId              | `MID-{SYSTEM}-{ID}` |
+| berthVisitId            | `BID-{SYSTEM}-{ID}` |
+| locationVisitId         | `LID-{SYSTEM}-{ID}` |
+| serviceId               | `SID-{SYSTEM}-{ID}` |
+
+`{UNLOCODE}` must be replaced by the UNLOCODE of the port the port call is taking place.
 
 `{SYSTEM}` must be replaced by a string consisting of alphanumeric characters or an underscore (`[A-Z0-9_]`) of which can reasonably be assumed that it globally uniquely identifies the system sending events.
 

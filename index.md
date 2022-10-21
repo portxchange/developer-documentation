@@ -44,7 +44,7 @@ More detailed information can be found in [Getting started: Sending Data](/sendi
 Besides sending data to PortXchange, it is also possible to retrieve data from our systems
 using the Exchange API. Currently, there are a few endpoints through which data can be queried.
 
-More detailed information can be found in [Receiving data](/receiving-data/index.md).
+More detailed information can be found in [Getting started: Receiving data](/receiving-data/index.md).
 
 ## Changelog
 

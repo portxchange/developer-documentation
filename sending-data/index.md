@@ -38,9 +38,9 @@ Every event must be JSON-encoded and contain next fields:
 **Attention!** 
 A vessel name provided in the `ship` object will not be used as a vessel identifier.
 
-### LocalPortcallId, OrganizationPortcallId, BerthVisitId, MovementId, LocationVisitId and ServiceId
+### LocalPortcallId, OrganizationPortcallId, MovementId, BerthVisitId, LocationVisitId and ServiceId
 
-The event system allows five different identifiers to be included in its context:
+The event system allows six different identifiers to be included in its context:
 * `localPortcallId`: this identifies the port call, which is a ship's stay within a single port.
   It is the identifier used by the local port authority, recognised by other organizations.
 * `organizationPortcallId`: this also identifies the port call, but it is the identifier used internally 

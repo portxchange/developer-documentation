@@ -8,8 +8,6 @@ import uuid
 # - estimate arrival to berth
 # - estimate departure from berth
 #
-# For the format specification see: https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts
-#
 # The example uses TEST environemnt.
 # Full list of URLS:
 # - TEST: https://exchange.port-xchange.com/test/
@@ -40,14 +38,12 @@ def get_events():
 
   eta = {
     'uuid': str(uuid.uuid1()),
-    # Consult with https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts#L215
     'eventType': 'berth.eta.terminal',
     'recordTime': record_time,
     'eventTime': arrival_time,
     # Port UNLOCODE
     'port': 'USHOU',
     'location': {
-      # Consult with https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts#L343
       'type': 'berth',
       'name': 'LBC Barge 1',
     },

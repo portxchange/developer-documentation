@@ -33,16 +33,19 @@ A detailed guide can be found on the [Authorization](authorization.md) page.
 
 ## Sending data to PortXchange
 
-Information about vessels and activities can be provided to PortXchange systems using the Push API.
-This API accepts information in form of events. 
-The events must be submitted one at a time.
+Information about vessels and activities can be provided to PortXchange systems
+using the Exchange API. This API accepts information in form of events. The events
+must be submitted one at a time.
 
-More detailed information is located on the [Getting started: Sending Data](/sending-data/index.md) page.
+More detailed information can be found in [Getting started: Sending Data](/sending-data/index.md).
 
 ## Receiving data from PortXchange
 
-Besides sending data to PortXchange, it is also possible to retrieve data from our systems. 
-Currently there are a few endpoints through which data can be queried.
-More detailed information is located on the [Receiving data](/receiving-data/index.md) page.
+Besides sending data to PortXchange, it is also possible to retrieve data from our systems
+using the Exchange API. Currently, there are a few endpoints through which data can be queried.
 
+More detailed information can be found in [Receiving data](/receiving-data/index.md).
 
+## Changelog
+
+Important updates for the APIs will be published on the [Changelog](changelog.md) page.

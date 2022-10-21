@@ -2,7 +2,7 @@
 
 Carrier can provide data about vessels visiting port, anchorages, berths, or terminals.
 
-General overview of the PortXchange Push API can be found on [Getting started: Sending Data](/sending-data/index.md) page.
+General overview of the PortXchange Exchange API can be found on [Getting started: Sending Data](/sending-data/index.md) page.
 
 ## Event types
 
@@ -27,7 +27,7 @@ port.eta.carrier -- an estimage time of arrival at port
 port.etd.carrier -- an estimate time of departure from port
 ```
 
-The full list of event types can be found in the [specification](https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts#L215-L340)
+The full list of event types can be found in the [Exchange API Docs](https://portxchange.github.io/exchange-api-docs/#/routes/post-event).
 
 ## Locations
 
@@ -41,4 +41,4 @@ pilotBoardingPlace -- when the event happens at the pilot boarding place (pilot 
 port - when providing port visit estimates and actuals
 ```
 
-The full list of event types can be found in the [specification](https://github.com/PortCallOptimisation/port-call-event-format/blob/master/Event_spec.ts#L343-L352)
+The full list of location types can be found in the [Exchange API Docs](https://portxchange.github.io/exchange-api-docs/#/routes/post-event).

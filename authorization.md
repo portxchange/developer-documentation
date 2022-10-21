@@ -21,7 +21,7 @@ For each environment, you must create a separate set of credentials.
 Use the example shell-script to check your credentials:
 
 ```shell
-curl --location --request GET 'https://exchange.port-xchange.com/test/v1/api/events?from=2021-10-12T13%3A00%3A00Z&to=2021-10-12T17%3A00%3A00Z' \
+curl --location --request GET 'https://exchange.port-xchange.com/test/v1/api/events?from=2021-10-12T13%3A00%3A00Z&to=2021-10-12T17%3A00%3A00Z&port=NLRTM' \
   --header 'Content-Type: application/json' \ 
   --header 'Accepts: application/json' \
   --header 'X-Company-Id: $YOUR_COMPANY_ID' \
@@ -39,7 +39,7 @@ headers = {
   'X-Company-Id': 'YOUR_COMPANY_ID',
   'X-Api-Key': 'YOUR_API_KEY'
 }
-requests.get('https://exchange.port-xchange.com/test/v1/api/events?from=2021-10-12T13%3A00%3A00Z&to=2021-10-12T17%3A00%3A00Z', headers = headers)
+requests.get('https://exchange.port-xchange.com/test/v1/api/events?from=2021-10-12T13%3A00%3A00Z&to=2021-10-12T17%3A00%3A00Z&port=NLRTM', headers = headers)
 ```
 
 For more examples, check the [Getting started: Receiving data](/receiving-data/index.md) or [Getting started: Sending Data](/sending-data/index.md) guides or Python and Shell scripts in [resources](/resources).
